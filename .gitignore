@@ -1,0 +1,14 @@
+# Node modules
+node_modules/
+
+# Environment variables
+frontend/.env
+backend/.env
+
+# Build outputs
+frontend/build/
+backend/.vercel/
+
+# Miscellaneous
+.DS_Store
+*.log
