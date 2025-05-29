@@ -53,6 +53,8 @@ const Home = () => {
     }
 
     try {
+      const apiKey = process.env.REACT_APP_GOOGLE_BOOKS_API_KEY;
+      
       const query = searchTerm.trim() || 'books';
       const response = await axios.get(
         `https://www.googleapis.com/books/v1/volumes?q=${encodeURIComponent(query)}&maxResults=${initialFetchCount}&key=${apiKey}`
