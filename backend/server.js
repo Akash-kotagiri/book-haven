@@ -26,5 +26,11 @@ app.use('/api/books', bookRoutes);
 // Error handler
 app.use(errorHandler);
 
-// Export for Vercel
+// Start server on Render-provided port or default to 5000 for local development
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
+
+// Export for Vercel (optional, kept for compatibility)
 module.exports = app;
